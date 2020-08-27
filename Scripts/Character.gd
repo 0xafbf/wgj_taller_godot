@@ -6,6 +6,8 @@ class_name Character
 var cantidad_monedas = 0
 var posicion_inicial = Vector2()
 
+var en_meta = false
+
 export var player = 1
 
 export var speed = 500.0
@@ -14,8 +16,9 @@ export var speed = 500.0
 func _ready():
 	posicion_inicial = position
 
-func reiniciar():
+func reset():
 	position = posicion_inicial
+	cantidad_monedas = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

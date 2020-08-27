@@ -3,10 +3,12 @@
 [ext_resource path="res://Scripts/Llave.gd" type="Script" id=1]
 [ext_resource path="res://Textures/gowxtu2p.bmp" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=23]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 187.1, 74.976 )
 
-[node name="Moneda" type="Area2D"]
+[node name="Moneda" type="Area2D" groups=[
+"monedas",
+]]
 position = Vector2( 1173.71, -474.558 )
 scale = Vector2( 0.412881, 0.432431 )
 script = ExtResource( 1 )
@@ -18,5 +20,5 @@ __meta__ = {
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 23 )
+shape = SubResource( 1 )
 [connection signal="body_entered" from="." to="." method="_on_AreaLLave_body_entered"]

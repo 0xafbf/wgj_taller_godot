@@ -3,6 +3,10 @@ extends Area2D
 
 var moneda_tomada = false
 
+func reset():
+	moneda_tomada = false
+	visible = true
+
 func _on_AreaLLave_body_entered(body):
 	if body is Character:
 		if not moneda_tomada:
